@@ -25,12 +25,11 @@
             <i class="fas fa-battery-full"></i>
         </div>
     </div>
-
     <div class="player__screen">
         <img class="songCover" src="bg-img.jpg" alt="">
         <div class="player__song-controls">
             <i class="fas fa-undo-alt"></i>
-            <span>SUPERLUMINAL</span>
+            <span>You're listening</span>
             <i class="fas fa-align-center"></i>
         </div>
 
@@ -54,7 +53,6 @@
             <i class="fas fa-step-forward"></i>
         </div>
     </div>
-
     <div class="player__icons">
         <i class="far fa-heart"></i>
         <i class="fas fa-history"></i>
@@ -78,22 +76,23 @@
             <i class="fas fa-battery-full"></i>
         </div>
     </div>
-    <div class="player__screen" style="height: 230px;">
-        <img class="songCover" src="bg-img.jpg" alt="">
+    <div class="player__screen" id="player__screen" style="height: 240px;">
+        <img class="songCover" id="songCover" src="bg-img.jpg" alt="">
+        <div class="player__song current">
+            <i class="fas fa-play-circle"></i>
+            <div class="song__name" id="song__name">
+                <span id="songTitle">Propellerbrain</span>
+                <span id="songAuthor">AMPACITY</span>
+            </div>
+        </div>
+
         <div class="player__song-controls">
             <i class="fas fa-undo-alt"></i>
-            <span>SUPERLUMINAL</span>
             <i class="fas fa-align-center"></i>
         </div>
     </div>
     <div class="player__songs">
-        <div class="player__song current">
-            <i class="fas fa-play-circle"></i>
-            <div class="song__name">
-                <span>Propellerbrain</span>
-                <span>AMPACITY</span>
-            </div>
-        </div>
+
         <div class="player__song">
             <div class="song__info">
                 <img src="bg-img.jpg" alt="">
@@ -102,38 +101,68 @@
                     <span>AMPACITY</span>
                 </div>
             </div>
-            <p>0:21</p>
+            <p id="duration">0:21</p>
         </div>
-        <div class="player__song">
-            <div class="song__info">
-                <img src="bg-img.jpg" alt="">
-                <div class="song__name">
-                    <span>Superluminal</span>
-                    <span>AMPACITY</span>
-                </div>
-            </div>
-            <p>5:16</p>
-        </div>
-        <div class="player__song">
-            <div class="song__info">
-                <img src="bg-img.jpg" alt="">
-                <div class="song__name">
-                    <span>42</span>
-                    <span>AMPACITY</span>
-                </div>
-            </div>
-            <p>3:51</p>
-        </div>
-        <div class="player__song">
-            <div class="song__info">
-                <img src="bg-img.jpg" alt="">
-                <div class="song__name">
-                    <span>Molten Baran</span>
-                    <span>AMPACITY</span>
-                </div>
-            </div>
-            <p>5:59</p>
-        </div>
+<!--        <div class="player__song">-->
+<!--            <div class="song__info">-->
+<!--                <img src="bg-img.jpg" alt="">-->
+<!--                <div class="song__name">-->
+<!--                    <span>Superluminal</span>-->
+<!--                    <span>AMPACITY</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p>5:16</p>-->
+<!--        </div>-->
+<!--        <div class="player__song">-->
+<!--            <div class="song__info">-->
+<!--                <img src="bg-img.jpg" alt="">-->
+<!--                <div class="song__name">-->
+<!--                    <span>42</span>-->
+<!--                    <span>AMPACITY</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p>3:51</p>-->
+<!--        </div>-->
+<!--        <div class="player__song">-->
+<!--            <div class="song__info">-->
+<!--                <img src="bg-img.jpg" alt="">-->
+<!--                <div class="song__name">-->
+<!--                    <span>Molten Baran</span>-->
+<!--                    <span>AMPACITY</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p>5:59</p>-->
+<!--        </div>-->
+<!--        <div class="player__song">-->
+<!--            <div class="song__info">-->
+<!--                <img src="bg-img.jpg" alt="">-->
+<!--                <div class="song__name">-->
+<!--                    <span>Superluminal</span>-->
+<!--                    <span>AMPACITY</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p>5:16</p>-->
+<!--        </div>-->
+<!--        <div class="player__song">-->
+<!--            <div class="song__info">-->
+<!--                <img src="bg-img.jpg" alt="">-->
+<!--                <div class="song__name">-->
+<!--                    <span>42</span>-->
+<!--                    <span>AMPACITY</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p>3:51</p>-->
+<!--        </div>-->
+<!--        <div class="player__song">-->
+<!--            <div class="song__info">-->
+<!--                <img src="bg-img.jpg" alt="">-->
+<!--                <div class="song__name">-->
+<!--                    <span>Molten Baran</span>-->
+<!--                    <span>AMPACITY</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p>5:59</p>-->
+<!--        </div>-->
 
     </div>
     <div class="player__icons">
