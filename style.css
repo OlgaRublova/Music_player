@@ -306,6 +306,11 @@ img {
     display: initial !important;
 }
 
+.fas.fa-heart{
+    color:crimson;
+}
+
+
 .player__song.current .fa-play-circle {
     position: absolute;
     top: -45%;

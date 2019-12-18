@@ -1,6 +1,11 @@
 /*Player icons buttons*/
 const icons = document.querySelector(".player__icons");
-const like = icons.querySelector(".fa-heart");
+
+const like = icons.querySelector(".far.fa-heart");
+const dislike = icons.querySelector(".fas.fa-heart");
+
+
+
 const history = icons.querySelector(".fa-history");
 const random = icons.querySelector(".fa-random");
 const list = icons.querySelector(".fa-list-ul");
@@ -41,16 +46,33 @@ const songNameSmall = playerScreenSmall.querySelector("#song__name");
 const songAuthorSmall = songNameSmall.querySelector("#songAuthor");
 const songTitleSmall = songNameSmall.querySelector("#songTitle");
 
-var songItem = document.querySelector(".player__song");
-
+var songItem = document.getElementsByClassName("player__song");
 
 
 startSong.addEventListener("click", playOrPause);
 stopSong.addEventListener("click", playOrPause);
 prevSong.addEventListener("click", prev);
 nextSong.addEventListener("click", next);
-// songItem.addEventListener("click", playSong);
 
+
+like.addEventListener("click", likeIconChange);
+dislike.addEventListener("click", dislikeIconChange);
+
+
+function likeIconChange() {
+    like.classList.toggle('invisible');
+    dislike.classList.toggle('invisible');
+    dislike.classList.toggle('visible');
+    like.classList.toggle('visible');
+}
+
+
+function dislikeIconChange() {
+    like.classList.toggle('invisible');
+    dislike.classList.toggle('invisible');
+    dislike.classList.toggle('visible');
+    like.classList.toggle('visible');
+}
 
 
 let songs = [
@@ -140,9 +162,10 @@ let songs = [
 
 var currentSong = 0;
 var song = new Audio(songs[currentSong].song);
- // var songleft = new Audio(songs.song);
+
 
 window.onload = init();
+
 function init() {
     stopSong.classList.toggle('visible');
     startSong.classList.toggle('invisible');
@@ -162,9 +185,7 @@ function changeBodyBg(color) {
     document.body.style.background = color;
 }
 
-// function playSong() {
-//     songleft.play();
-// }
+
 function playOrPause() {
     if (song.paused) {
         song.play();
@@ -196,8 +217,9 @@ function roundTime() {
     secR = secs.toString();
     currentSongTime.innerText = minR.padStart(2, "0") + ":" + secR.padStart(2, "0");
 }
+
 function countDown() {
-    // var duration, playTime, timeLeft, sec, min, s, m;
+    var duration, playTime, timeLeft, sec, min, s, m;
 
     duration = Number(parseInt(song.duration));
     playTime = Number(parseInt(song.currentTime));
@@ -230,6 +252,7 @@ function next() {
 
     }
 }
+
 function prev() {
 
     currentSong--;
@@ -242,8 +265,6 @@ function prev() {
     song.play();
     currentSongScreenUpdate();
 }
-
-
 
 
 function currentSongScreenUpdate() {
@@ -272,7 +293,37 @@ function displaySongs(song) {
 
     playerSongs.innerHTML = result;
 }
+
 displaySongs();
+
+for (var i = 0; i < songs.length; i++) {
+    songItem[i].addEventListener("click", playSong)
+}
+
+
+function playSong() {
+// this.songItem.innerHTML = songs[currentSong].song;
+    // songItem[song].play();
+    // songItem[i].play();
+    // songItem.play();
+    // song.play();
+    // songs[i].song.play();
+    // songs[i].play();
+    // this.songs[i].song.play();
+    // this.song.play();
+    // this.play();
+    for (var i = 0; i < songs.length; i++) {
+        var audioElement = [];
+        audioElement = new Audio(songs[i].song);
+        // songItem[i].song = audioElement[i];
+        // audioElement[i].play();
+        console.log(audioElement[i]);
+
+    }
+
+    console.log("hello");
+}
+
 
 
 
